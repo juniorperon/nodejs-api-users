@@ -1,9 +1,11 @@
 const express = require('express')
 const uuid = require('uuid')
+const cors =require('cors');
 
-const port = 3001
-const app = express()
+const port = 3001;
+const app = express();
 app.use(express.json())
+app.use(cors());
 
 app.listen(port, () => {
     console.log(`🚀 Server Started on port ${port}`)
